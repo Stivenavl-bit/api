@@ -3,11 +3,12 @@
 /* eslint-disable no-console */
 /* eslint-disable prettier/prettier */
 const User = use('App/Models/User');
+const Produ = use('App/Models/Product');
 // eslint-disable-next-line no-unused-vars
 const Superagent = use('superagent');
 
 class TestController {
-  //crear usuarios
+  //create users
   async registerbetalabs({ request }) {
     const { tipo, username, subname, email, cpfcnpj, rgie, nacimiento, sexo, typeicms, ddd, phone, vendedor, horariodeentrega, namempresarial } = request.all();
     const user = await User.create({
@@ -28,17 +29,16 @@ class TestController {
     });
     return user;
   }
+  //create products
   async productsbetalabs({ request }) {
-    const { tipo, username, subname, email, cpfcnpj, rgie, nacimiento, sexo, typeicms, ddd, phone, vendedor} = request.all();
-    const produ = await User.create({
+    const { tipo, username, subname, cpfcnpj, rgie, nacimiento, typeicms, ddd, phone, vendedor } = request.all();
+    const produ = await Produ.create({
       tipo,
       username,
       subname,
-      email,
       cpfcnpj,
       rgie,
       nacimiento,
-      sexo,
       typeicms,
       ddd,
       phone,
@@ -48,9 +48,14 @@ class TestController {
   }
 
   async login({ request }) {
-    const { email } = request.all();
-    console.log("el usuario existe");
-    return email;
+    const { email, tipo } = request.all();
+    const target = (email, tipo)
+    return target;
+
+  }
+  async verificacionproducto({ request }) {
+    const { username } = request.all();
+    return username;
 
   }
 }
