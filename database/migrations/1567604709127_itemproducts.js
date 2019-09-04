@@ -15,7 +15,6 @@ class ItemProductsSchema extends Schema {
       table.string('ddd', 80).notNullable();
       table.string('phone', 80).notNullable();
       table.string('vendedor', 80).notNullable();
-
       table.timestamps();
       table.timestamp('deleted_at');
     });

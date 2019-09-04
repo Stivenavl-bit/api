@@ -7,7 +7,7 @@ const Produ = use('App/Models/Product');
 // eslint-disable-next-line no-unused-vars
 const Superagent = use('superagent');
 
-class TestController {
+class BetaController {
   //create users
   async registerbetalabs({ request }) {
     const { tipo, username, subname, email, cpfcnpj, rgie, nacimiento, sexo, typeicms, ddd, phone, vendedor, horariodeentrega, namempresarial } = request.all();
@@ -60,4 +60,4 @@ class TestController {
   }
 }
 
-module.exports = TestController;
+module.exports = BetaController;
