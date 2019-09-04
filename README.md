@@ -6,10 +6,6 @@ To use it you need execute the following commands.
 
 ```sh
 npm install -g adonis
-
-adonis new {your project name} --blueprint=git@github.com:andresilvagomez/adonis-api-app.git
-
-yarn dev
 ```
 
 This api has te following modules
