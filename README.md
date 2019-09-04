@@ -1,11 +1,12 @@
 # Adonis api ready to start
 
-This is a light aplication example api builded with adonis js
-
-To use it you need execute the following commands.
-
 ```sh
-npm install -g adonis
+Node.js >= 8.16.1
+npm >= 6.4.1
+
+> npm install -g adonis
+> npm i -g @adonisjs/cli
+
 ```
 
 This api has te following modules
