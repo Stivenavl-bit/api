@@ -14,19 +14,19 @@ class AbstractController {
     this.permissibleParams = permissibleParams;
   }
 
-  // connectcontact() {
-  //   const data = {};
-  //   const result = await superagent
-  //     .get('https://app.omie.com.br/')
-  //     .aout(Env.get('OMIE_USER'), Env.get('OMIE_KEY'))
-  //     .query({
-  //       action: 'create',
-  //       data
-  //     })
-  //     .use(nocache);
+  connectcontact() {
+    const data = {};
+    const result = await superagent
+      .get('https://app.omie.com.br/')
+      .aout(Env.get('OMIE_USER'), Env.get('OMIE_KEY'))
+      .query({
+        action: 'create',
+        data
+      })
+      .use(nocache);
 
-  //   console.log(result);
-  // }
+    console.log(result);
+  }
 
   index() {
     return this.Model.paginate();
